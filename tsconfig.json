@@ -1,0 +1,15 @@
+{ "compilerOptions": {
+    "target": "ES2022", // Target modern Node.js features
+    "module": "NodeNext", // Use modern ES Modules
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true, // Enable strict type checking
+    "skipLibCheck": true,
+    "outDir": "./build", // Output directory for compiled JS
+    "rootDir": "./src", // Source directory
+    "sourceMap": true // Generate source maps for debugging
+  },
+  "include": [ "src/**/*" ], // Compile files in src
+  "exclude": [ "node_modules" ]
+}
