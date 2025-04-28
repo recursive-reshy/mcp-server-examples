@@ -9,11 +9,9 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 
 const main = async () => {
   // 1. Create a new MCP server instance
-  const server = new McpServer(
+  const Server = new McpServer(
     // Server identification
-    { name: 'GreetingServer',
-      version: '0.1.0'
-    },
+    { name: 'GreetingServer', version: '0.1.0' },
     // Declare the server's supported capabilities
     { capabilities: {
         tools: { listChanged: false}, // We support tools, no dynamic changes
@@ -24,7 +22,7 @@ const main = async () => {
   )
 
   // 2. Add tool implementation
-  server.tool(
+  Server.tool(
     'greet',
     { name: z // 3. Define the input schema for the tool
         .string()
@@ -42,10 +40,10 @@ const main = async () => {
 
   try {
     // 5. Connect to server, using stdio transport
-    await server.connect( new StdioServerTransport() )
+    await Server.connect( new StdioServerTransport() )
   } catch (error) {
     console.error( `Failed to connect to server: ${error}` )
-    process.exit( 1 )
+    process.exit(1)
   }
 }
 
