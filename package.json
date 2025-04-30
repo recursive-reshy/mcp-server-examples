@@ -5,8 +5,11 @@
   "license": "ISC",
   "keywords": [ "MCP" ],
   "description": "MCP server implementation examples",
-  "main": "build/index.js",
   "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "mcp-server-example": "build/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node build/index.js",
