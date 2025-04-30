@@ -49,6 +49,8 @@ const main = async () => {
 
 const startServer = async () => {
   try {
+    console.log('Starting server...');
+    
     await main()
   } catch (error) {
     console.error( `Unhandled error during server startup: ${error}` )
