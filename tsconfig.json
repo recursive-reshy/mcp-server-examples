@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "outDir": "./build", // Output directory for compiled JS
     "rootDir": "./src", // Source directory
-    "sourceMap": true // Generate source maps for debugging
+    "sourceMap": false // Generate source maps for debugging
   },
   "include": [ "src/**/*" ], // Compile files in src
   "exclude": [ "node_modules" ]
